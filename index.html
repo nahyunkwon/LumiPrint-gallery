@@ -107,7 +107,7 @@ http://www.templatemo.com/tm-500-fluid-gallery
                                             <img src="fig/pocket_ui.png" alt="Image" class="img-fluid tm-img" title="test">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Barcoded 3D Fabric</h2>
-                                                <p class="tm-figure-description">Luminous Pocket</p>
+                                                <p class="tm-figure-description">Barcoded Pocket</p>
 <!--                                                <p class="tm-figure-description">3D printed pocket that is attachable to fabric with custom patterns</p>-->
                                                 <a href="fig/pocket_ui.png">View more</a>
                                             </figcaption>
@@ -283,18 +283,49 @@ http://www.templatemo.com/tm-500-fluid-gallery
                     image: {
                       titleSrc: function(item) {
 
-                          var caption = item.el.attr('title');
-                          alert(item.src);
+                          // var caption = item.el.attr('title');
+                          var name = item.src.split('/')[1].split('.')[0];
+                          // alert(name);
 
-                          var pinItURL = "https://pinterest.com/pin/create/button/";
+                          var file = 'files/'+name+'.gcode';
+                          var custom = '';
+                          var title = '';
+
+                          if (name === 'pocket_ui') {
+                              title = 'Barcoded Pocket';
+                          }
+                          else if (name === 'sign_arrow') {
+                              title = 'Arrow Signs';
+                          }
+                          else if (name === 'pot') {
+                              title = 'Flower Pot Tag';
+                          }
+                          else if (name === 'road_sign') {
+                              title = 'Sidewalk Indicators'
+                          }
+                          else if (name === 'litho') {
+                              title = 'Lithophane Pendant'
+                          }
+                          else if (name === 'bracelet') {
+                              title = 'Luminous Bracelet'
+                          }
+                          else if (name === 'bunny-2') {
+                              title = 'Barcoded Bunny'
+                          }
+
+
+
+                          // var pinItURL = "https://pinterest.com/pin/create/button/";
 
                           // Refer to https://developers.pinterest.com/pin_it/
-                          pinItURL += '?url=' + 'http://dimsemenov.com/plugins/magnific-popup/';
-                          pinItURL += '&media=' + item.el.attr('href');
-                          pinItURL += '&description=' + caption;
+                          // pinItURL += '?url=' + 'http://dimsemenov.com/plugins/magnific-popup/';
+                          // pinItURL += '&media=' + item.el.attr('href');
+                          // pinItURL += '&description=' + caption;
 
-                          return '<button type="button" class="btn btn-primary" href="'+pinItURL+'" target="_blank">Download</button>' +
-                            ' &middot; <button type="button" class="btn btn-success" href="'+pinItURL+'" target="_blank">Custom</button>';
+                          // ' &middot; <button type="button" class="btn btn-success" href="'+custom+'" target="_blank">Custom</button>'
+
+                          return title + ' | <a href="'+file+'" target="_blank">Download</a>' +
+                            ' &middot; <a href="'+custom+'" target="_blank">Custom</a>';
                             }
                         }
 
