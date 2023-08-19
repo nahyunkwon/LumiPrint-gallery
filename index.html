@@ -28,6 +28,8 @@ http://www.templatemo.com/tm-500-fluid-gallery
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
           <![endif]-->
 
         <!-- These two JS are loaded at the top for gray scale including the loader. -->
@@ -100,13 +102,13 @@ http://www.templatemo.com/tm-500-fluid-gallery
                                 <div class="tm-img-gallery gallery-one">
                                 <!-- Gallery One pop up connected with JS code below -->
 
-                                    <h1 class="subheading">Featured Examples</h1>
+                                    <h1 class="subheading"> &#x2022; Featured Examples</h1>
 
                                     <div class="grid-item" title="Luminous Pocket" id="test">
                                         <figure class="effect-sadie">
                                             <img src="fig/pocket_ui.png" alt="Image" class="img-fluid tm-img" title="test">
                                             <figcaption>
-                                                <h2 class="tm-figure-title">Barcoded 3D Fabric</h2>
+                                                <h2 class="tm-figure-title">Programmed Textile</h2>
                                                 <p class="tm-figure-description">Barcoded Pocket</p>
 <!--                                                <p class="tm-figure-description">3D printed pocket that is attachable to fabric with custom patterns</p>-->
                                                 <a href="fig/pocket_ui.png">View more</a>
@@ -114,8 +116,19 @@ http://www.templatemo.com/tm-500-fluid-gallery
                                         </figure>
                                     </div>
 
-
                                      <div class="grid-item">
+                                        <figure class="effect-sadie">
+                                            <img src="fig/lumi_label.png" alt="Image" class="img-fluid tm-img">
+                                            <figcaption>
+                                                <h2 class="tm-figure-title">Text Highlighting</h2>
+                                                <p class="tm-figure-description">Luminous Label</p>
+<!--                                                <p class="tm-figure-description">Pot tag that can present the information in the dark</p>-->
+                                                <a href="fig/lumi_label.png">View more</a>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div class="grid-item">
                                         <figure class="effect-sadie">
                                             <img src="fig/sign_arrow.png" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
@@ -127,19 +140,9 @@ http://www.templatemo.com/tm-500-fluid-gallery
                                         </figure>
                                     </div>
 
-                                     <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="fig/pot.png" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">Font Family</h2>
-                                                <p class="tm-figure-description">Flower Pot Tag</p>
-<!--                                                <p class="tm-figure-description">Pot tag that can present the information in the dark</p>-->
-                                                <a href="fig/pot.png">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
 
-                                    <h1 class="subheading"><br>Explore More!</h1>
+
+                                    <h1 class="subheading"> <br>&#x2022; Explore More!</h1>
 
 
                                     <div class="grid-item">
@@ -157,7 +160,7 @@ http://www.templatemo.com/tm-500-fluid-gallery
                                         <figure class="effect-sadie">
                                             <img src="fig/litho.png" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
-                                                <h2 class="tm-figure-title">Spatial visualization on 2D</h2>
+                                                <h2 class="tm-figure-title">Spatial Illusion</h2>
                                                 <p class="tm-figure-description">Lithophane Pendant</p>
                                                 <a href="fig/litho.png">View more</a>
                                             </figcaption>
@@ -297,8 +300,8 @@ http://www.templatemo.com/tm-500-fluid-gallery
                           else if (name === 'sign_arrow') {
                               title = 'Arrow Signs';
                           }
-                          else if (name === 'pot') {
-                              title = 'Flower Pot Tag';
+                          else if (name === 'lumi_label') {
+                              title = 'Luminous Label';
                           }
                           else if (name === 'road_sign') {
                               title = 'Sidewalk Indicators'
@@ -414,7 +417,13 @@ http://www.templatemo.com/tm-500-fluid-gallery
                 loadGoogleMap(); // Google Map
             });
 
-        </script>            
+        </script>
+
+    <div id="dialog-form" title="Create new user">
+  <p class="validateTips">All form fields are required.</p>
+
+</div>
+
 
 </body>
 </html>

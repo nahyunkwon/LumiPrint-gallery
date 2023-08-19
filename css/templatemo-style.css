@@ -734,6 +734,8 @@ figure.effect-sadie:hover p {
 .subheading{
 	width:100%;
 	display: flex;
-	margin: 10px 10px;
+	margin-left: 20px;
+	margin-top: 5px;
 	font-family: 'Trebuchet MS', serif;
+	font-size: 20px;
 }
